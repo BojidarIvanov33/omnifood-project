@@ -1,0 +1,202 @@
+:root {
+  --primery-color: #e67e22;
+  --secondary-color: #f8d8bd;
+  --third-color: #cf711f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+strong {
+  font-weight: 500;
+}
+*:focus {
+  outline: 2px dashed var(--primery-color);
+  outline-offset: 0.3rem;
+}
+.hidd3n {
+  display: none;
+}
+/***************************************/
+/**************** General Reusable classes*********************/
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin-bottom: 3.2rem;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--primery-color);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-weight: 400;
+  transition: background-color 700ms;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: var(--primery-color);
+  color: #fff;
+}
+.btn--full:hover {
+  cursor: pointer;
+  background-color: var(--third-color);
+}
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #333;
+}
+.btn--outline:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.2rem !important;
+}
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primery-color);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  transition: all 300ms;
+}
+.link:hover,
+.link:active {
+  color: #8bd08b;
+  border-bottom: 1px solid transparent;
+}
+.center-text {
+  text-align: center;
+}
+.list {
+  list-style: none;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+/***************************************/
+/****^^^^^^^^^^^^^^^^^^General^^^^^^^^****************/
+/************Header****************/
+.header {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.logo {
+  height: 2.4rem;
+}
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 500ms;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--third-color);
+}
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1rem 2rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: var(--primery-color);
+}
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: var(--third-color);
+  box-shadow: 0 0 10px 0 var(--primery-color);
+}
